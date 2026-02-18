@@ -1,13 +1,12 @@
-const express = require("express");
+const express = require('express');
 
 const router = express.Router();
 
-// Move your posts route here
-router.get("/posts", (req, res) => {
-  res.status(200).json({
-    message: "Posts fetched successfully",
-    data: []
-  });
+router.get('/', (req, res) => {
+    res.json({
+        success: true,
+        message: "Posts fetched successfully"
+    });
 });
 
 module.exports = router;
