@@ -1,12 +1,10 @@
 const express = require('express');
-
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.json({
-        success: true,
-        message: "Posts fetched successfully"
-    });
-});
+// Import controller
+const postController = require('../controllers/posts.controller');
+
+// Use controller function
+router.get('/', postController.getAllPosts);
 
 module.exports = router;
